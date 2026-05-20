@@ -7,6 +7,7 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { Providers } from "@/components/providers";
 
 const playfairDisplayHeading = Playfair_Display({
   subsets: ["latin"],
@@ -49,7 +50,7 @@ export default function RootLayout({
       )}
     >
       <body className="min-h-full flex flex-col px-2 sm:px-4 md:px-6 lg:px-8">
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

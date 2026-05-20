@@ -1,12 +1,12 @@
 import { db } from "@/db/db";
-import { type victim, victimsTable } from "@/db/schema";
+import { type Victim, victimsTable } from "@/db/schema";
 import { eq } from "drizzle-orm";
 
 export async function getVictims({
   ownerId,
 }: {
   ownerId: string;
-}): Promise<victim[]> {
+}): Promise<Victim[]> {
   try {
     // 1. Create the user
     const victims = await db

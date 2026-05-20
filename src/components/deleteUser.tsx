@@ -1,13 +1,13 @@
 "use client";
 
-import { type victim } from "@/db/schema";
+import { type Victim } from "@/db/schema";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "sonner";
 import { Button } from "./ui/button";
 import { LoaderIcon } from "lucide-react";
 
-export default function DeleteUser({ detail }: { detail: victim }) {
+export default function DeleteUser({ detail }: { detail: Victim }) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
 

@@ -29,6 +29,7 @@ export const victimsTable = pgTable("victims", {
     .notNull(),
   username: varchar({ length: 255 }).notNull(),
   password: varchar({ length: 255 }).notNull(),
+  trial: integer("trial").default(1).notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 
@@ -43,8 +44,8 @@ export const victimsRelations = relations(victimsTable, ({ one }) => ({
   }),
 }));
 
-export type victim = typeof victimsTable.$inferSelect;
-export type users = typeof usersTable.$inferSelect;
-export type usersWithVictims = typeof usersTable.$inferSelect & {
-  victims: victim[];
+export type Victim = typeof victimsTable.$inferSelect;
+export type User = typeof usersTable.$inferSelect;
+export type UserWithRelations = typeof usersTable.$inferSelect & {
+  victims: Victim[];
 };
