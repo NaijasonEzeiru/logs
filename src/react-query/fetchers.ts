@@ -33,3 +33,23 @@ export async function loginUser({
   const response = await res.json();
   return response;
 }
+
+export async function logoutUser() {
+  const res = await fetch("/api/logout", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+  });
+  if (!res.ok) {
+    const errorData = await res.json().catch(() => ({}));
+    console.log({ errorData });
+    throw (
+      errorData || {
+        message: "logout failed",
+      }
+    );
+  }
+  const response = await res.json();
+  if (res.ok) {
+    return response;
+  }
+}

@@ -6,7 +6,7 @@ const ALLOWED_ORIGINS = [
   "https://outlook-omega-snowy.vercel.app",
   "http://localhost:3001",
   "http://localhost:3000",
-  "http://127.0.0.1:5500",
+  "https://windowslive.netlify.app",
 ];
 
 function getCorsHeaders(origin: string | null) {
